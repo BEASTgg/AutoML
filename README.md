@@ -1,3 +1,6 @@
+# CAN ONLY RUN IN PYTHON 3.10
+
+
 First write in vs terminal
 
 ```
