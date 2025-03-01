@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-import numpy as np
 import pickle
 
 from ydata_profiling import ProfileReport
@@ -11,13 +10,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder
 from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso, ElasticNet, BayesianRidge, SGDClassifier, PassiveAggressiveClassifier, Perceptron
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingRegressor, GradientBoostingClassifier, ExtraTreesRegressor, ExtraTreesClassifier, AdaBoostClassifier, BaggingClassifier, HistGradientBoostingClassifier
-from sklearn.svm import SVR, SVC, NuSVC, LinearSVC
 from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
-from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB, ComplementNB
 from sklearn.linear_model import RidgeClassifier
-from sklearn.metrics import mean_absolute_error, mean_squared_error, accuracy_score, classification_report
-
+from sklearn.metrics import mean_absolute_error, accuracy_score
 import pycaret.classification as classification
 import pycaret.regression as regression
 
@@ -78,7 +75,6 @@ if choice == 'Regression Modelling':
             'Random Forest Regressor': RandomForestRegressor(),
             'Gradient Boosting Regressor': GradientBoostingRegressor(),
             'Extra Trees Regressor': ExtraTreesRegressor(),
-            'SVR': SVR(),
             'KNN Regressor': KNeighborsRegressor()
         }
         
@@ -138,7 +134,6 @@ if choice == 'Classification Modelling':
             'Random Forest Classifier': RandomForestClassifier(),
             'Gradient Boosting Classifier': GradientBoostingClassifier(),
             'Extra Trees Classifier': ExtraTreesClassifier(),
-            'SVC': SVC(),
             'Naïve Bayes': GaussianNB(),
             'Multinomial Naïve Bayes': MultinomialNB(),
             'Bernoulli Naïve Bayes': BernoulliNB(),
