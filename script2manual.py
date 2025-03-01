@@ -52,7 +52,7 @@ if choice == 'Data Analysis':
 
 
 if choice == 'Regression Modelling':
-    st.title('Manual Regression Model Training')
+    st.title('Regression Model Training')
     target = st.selectbox('Select Target Parameter', df.columns)
     
     if st.button('Train Model'):
@@ -109,7 +109,7 @@ if choice == 'Regression Modelling':
 
 
 if choice == 'Classification Modelling':
-    st.title('Manual Classification Model Training')
+    st.title('Classification Model Training')
     target = st.selectbox('Select Target Parameter', df.columns)
     
     if st.button('Train Model'):
