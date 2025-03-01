@@ -98,11 +98,8 @@ if choice == 'Regression Modelling':
 
         regression.save_model(best_model, 'best_regressor')
         
-        with open('best_regressor.pkl', 'wb') as f:
-            pickle.dump(best_model, f)
         with open('best_regressor.pkl', 'rb') as f:
             st.download_button('Download Model', f, file_name='best_regressor.pkl')
-
 
 if choice == 'Classification Modelling':
     st.title('Classification Model Training')
@@ -166,10 +163,8 @@ if choice == 'Classification Modelling':
 
         classification.save_model(best_model, 'best_classifier')
         
-        with open('best_classifier.pkl', 'wb') as f:
-            pickle.dump(best_model, f)
         with open('best_classifier.pkl', 'rb') as f:
-            st.download_button('Download Model', f, file_name='best_classifier.pkl')
+                st.download_button('Download the Model', f, 'trained_classifier.pkl')
 
 if choice == 'Regressor Testing':
     st.title('Model Testing')
